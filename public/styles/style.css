@@ -21,7 +21,7 @@ body {
   background-color: white;
 }
 
-body, html {
+body, html,#body {
   height: 100%;
 }
 
