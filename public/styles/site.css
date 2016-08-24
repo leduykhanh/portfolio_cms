@@ -5834,3 +5834,9 @@ button.close {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999; }

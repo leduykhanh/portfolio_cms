@@ -29,6 +29,13 @@ jQuery(document).ready(function($){
     });
 
 	function updateNavigation() {
+			var header = $("#header");
+			  if ($(window).scrollTop() > 50) {
+				header.addClass("top-header");
+			  } else {
+				header.removeClass("top-header");
+			  }
+			  console.log($(window).scrollTop());
 		contentSections.each(function(){
 			$this = $(this);
 			var activeSection = $('#cd-vertical-nav a[href="#'+$this.attr('id')+'"]').data('number') - 1;
