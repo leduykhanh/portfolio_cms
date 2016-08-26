@@ -26,6 +26,19 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'About', key: 'about', href: '/about',icon:'fa fa-user' },
 	];
 	res.locals.user = req.user;
+	res.locals.page = {
+		title: 'Jangkoo',
+		path: req.url.split("?")[0] // strip the query - handy for redirecting back to the page
+	};
+	var bowser = require('../lib/node-bowser').detect(req);
+
+	res.locals.system = {
+		mobile: bowser.mobile,
+		ios: bowser.ios,
+		iphone: bowser.iphone,
+		ipad: bowser.ipad,
+		android: bowser.android
+	}
 	next();
 };
 
