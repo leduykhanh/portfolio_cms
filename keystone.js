@@ -26,6 +26,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	'cloudinary config': 'cloudinary://549526588116315:0ymQv2QEZI4Q5ziddAYTtd3AibY@jangkoo',
+	'cookie secret':'jangkoo',
 });
 
 // Load your project's Models
