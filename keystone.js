@@ -72,6 +72,8 @@ keystone.set('nav', {
 	users: 'users',
 });
 
+keystone.set('cloudinary config', { cloud_name: 'jangkoo', api_key: '549526588116315', api_secret: '0ymQv2QEZI4Q5ziddAYTtd3AibY' });
+
 // Start Keystone to connect to your database and initialise the web server
 
 keystone.start();
