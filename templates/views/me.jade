@@ -1,0 +1,32 @@
+extends ../layouts/default
+
+block intro
+
+block flash-messages
+
+block content
+	.container-sm
+		.page-intro
+			p.lead Hi #{user.name.first}, these are your settings and
+				a(href=user.url) profile details
+					hr.mv-2
+				button(type='submit', data-loading-text="Saving...").btn.btn-primary Save profile
+
+		.ui-reveal
+			.ui-reveal__initial
+				button(type='button').btn.btn-link.ui-reveal__trigger Change Password
+			.ui-reveal__hidden
+				form(method='post', autocomplete='off')
+					input(type='hidden', name='action', value='profile.password')
+					h3 Change password
+					.form-group
+						label(for='change-passwordNew').sr-only New Password
+						input(type='password', name='password', placeholder='New Password', id='change-passwordNew').form-control
+					.form-group
+						label(for='change-passwordConfirm').sr-only Confirm Password
+						input(type='password', name='password_confirm', placeholder='Confirm Password', id='signin-passwordConfirm').form-control
+					.form-group
+						button(type='submit', data-loading-text="Changing...").btn.btn-primary Change
+
+block js
+	script(src='/js/views/me.js')
