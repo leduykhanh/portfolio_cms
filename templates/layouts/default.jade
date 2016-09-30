@@ -66,6 +66,10 @@ html
 							else
 								li: a(href='/keystone/signin') Sign In
 
+		//- slider
+		block slider
+
+		
 		//- BODY
 		#body
 
@@ -79,8 +83,7 @@ html
 			//- Flash messages allow you to display once-off status messages to users, e.g. form
 			//- validation errors, success messages, etc.
 			+flash-messages(messages)
-			//- slider
-			block slider
+
 			//- The content block should contain the body of your template's content
 			block content
 
@@ -97,7 +100,7 @@ html
 		.container: #footer
 
 			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			p Copyright@Jangkoo 2016.
 
 
 		//- JAVASCRIPT
