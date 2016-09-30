@@ -64,12 +64,12 @@ html
 									li: a(href='/keystone') Open Keystone
 								li: a(href='/keystone/signout') Sign Out
 							else
-								li: a(href='/keystone/signin') Sign In
+								li: a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign in
 
 		//- slider
 		block slider
 
-		
+
 		//- BODY
 		#body
 
