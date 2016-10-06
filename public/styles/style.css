@@ -342,15 +342,15 @@ Main components
   font-size: 26px;
   color: #bda3ad;
   position: relative;
-  left: 50%;
+  /*left: 50%;*/
   /*top: 50%;*/
   bottom: auto;
   right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
+  /*-webkit-transform: translateX(-50%) translateY(-50%);
   -moz-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);*/
   width: 90%;
   max-width: 768px;
   text-align: center;
