@@ -5,7 +5,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   if ($(target).is(':empty')) {
     $.ajax({
       type: "GET",
-      url: "/article/",
+      url: "http://www.dota2.com/webapi/ILeaderboard/GetDivisionLeaderboard/v0001?division="+target.substr(1),
       error: function(data){
         alert("There was a problem");
       },
