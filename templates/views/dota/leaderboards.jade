@@ -1,12 +1,21 @@
 extends ../../layouts/default
 
 block content
-	ul.nav.nav-tabs
-		li.active 
-			a(href="#america") Americas
-		li 
-			a(href="#europe") Europe
-		li 
-			a(href="#sea") SEA
-		li 
-			a(href="#china") China
+	.container.text-center.top-pad
+		ul.nav.nav-tabs
+			li.active 
+				a(data-toggle="tab",href="#america") Americas
+			li 
+				a(data-toggle="tab",href="#europe") Europe
+			li 
+				a(data-toggle="tab",href="#sea") SEA
+			li 
+				a(data-toggle="tab",href="#china") China
+
+		.tab-content
+			.tab-pane.fade.in.active#america
+			.tab-pane.fade#europe
+			.tab-pane.fade#sea
+			.tab-pane.fade#china
+block js
+	script(src='/js/dota/leaderboard.js')
