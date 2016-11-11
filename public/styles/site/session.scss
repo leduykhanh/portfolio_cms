@@ -54,7 +54,7 @@
 // divide social/form
 
 .auth-form-divider {
-	color: @gray-light;
+	color: green;
 	margin-bottom: 1.5em;
 	margin-top: 1em;
 	position: relative;
@@ -63,7 +63,7 @@
 
 	&:after {
 		.size(100%,1px);
-		background-color: @hr-border;
+		background-color: green;
 		content: "";
 		left: 0;
 		top: 50%;
@@ -71,7 +71,7 @@
 	}
 }
 .auth-form-divider-text {
-	background-color: @body-bg;
+	background-color: grey;
 	display: inline-block;
 	padding: 0 1em;
 	position: relative;
@@ -104,7 +104,7 @@
 
 		
 		&:focus {
-			box-shadow: 0 0 5px -2px fade(@link-color, 60%), 0 1px 2px @gray-lighter;
+			box-shadow: 0 0 5px -2px fade(green, 60%), 0 1px 2px red;
 			position: relative;
 		}
 	}
