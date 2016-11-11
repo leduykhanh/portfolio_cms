@@ -42,7 +42,7 @@
 .signup-button__text {
 	display: none;
 }
-@media (min-width: @screen-md-min) {
+@media (min-width: $screen-md-min) {
 	.signup-button__text {
 		display: inline-block;
 		vertical-align: middle;
