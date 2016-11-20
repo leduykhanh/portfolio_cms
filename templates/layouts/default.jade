@@ -53,53 +53,53 @@ html
 							span(class="icon-bar")
 							span(class="icon-bar")
 							span(class="icon-bar")
-						
+
 						a(class="navbar-brand", href="/") Jangkoo
-					
+
 
 					.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
 						ul(class="nav navbar-nav navbar-right")
 							each link in navLinks
 								li(class=(section == link.key ? 'active' : null)): a(href=link.href): i(class=link.icon)= link.label
-							
+
 							li(class="dropdown")
-								a(href="#", class="dropdown-toggle", data-toggle="dropdown") Portfolio 
-									
+								a(href="#", class="dropdown-toggle", data-toggle="dropdown"): i(class="fa fa-briefcase")= Portfolio 
+
 								ul(class="dropdown-menu")
 									li
 										a(href="https://waach.com/")  Waach
-									
+
 									li
 										a(href="http://stage.goalsmapper.com") GoalsMapper
-									
+
 									li
 										a(href="http://qesafety.com/thi/autora/") THI autora
-									
+
 									li
 										a(href="/projects/hpsite/cec/") HP microsite
-									
+
 									li
 										a(href="/projects/menuboxes/") Menu boxes
 									li
 										a(href="/projects/wordshooting/") Word shooting web game
-														
-							
+
+
 							li(class="dropdown")
-								a(href="#" ,class="dropdown-toggle", data-toggle="dropdown") Dota2 things 
-									
+								a(href="#" ,class="dropdown-toggle", data-toggle="dropdown") Dota2 things
+
 								ul(class="dropdown-menu")
 									li
 										a(href="/dota/leaderboards") Leaderboards
-									
+
 									li
 										a(href="sidebar.html") Sidebar Page
-									
+
 									li
 										a(href="faq.htmlFAQ")
-									
+
 									li
 										a(href="404.html404")
-									
+
 									li
 										a(href="pricing.html") Pricing Table
 							if user
