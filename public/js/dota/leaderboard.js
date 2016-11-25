@@ -13,7 +13,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         
         var table = $('<table class="table table-hover"></table>');
         JSON.parse(data).leaderboard.map(function(value,index){
-          table.append('<tr><td>' + value.name + '</td>' + '<td>' + value.solo_mmr + '</td>' + '</tr>');
+          table.append('<tr><td>' + value.rank + '</td><td>' + value.name + '</td>' + '<td>' + value.solo_mmr + '</td>' + '</tr>');
         })
         $(target).html(table);
       }
