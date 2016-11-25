@@ -10,7 +10,11 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         alert("There was a problem");
       },
       success: function(data){
-        $(target).html(data);
+        var table = $('<table class="table table-hover"></table>');
+        data.leaderboard.map(function(value,index){
+          table.append('<tr><td>' + value.name + '</td>' + '<td>' + value.solo_mmr + '</td>' + '</tr>');
+        })
+        $(target).html(table);
       }
   })
  }
