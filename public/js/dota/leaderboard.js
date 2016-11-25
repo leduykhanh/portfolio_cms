@@ -1,7 +1,7 @@
 
 $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
   var target = $(e.target).attr("href") ;// activated tab
-  console.log(target);
+  
   if ($(target).is(':empty')) {
     $.ajax({
       type: "GET",
@@ -10,6 +10,7 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         alert("There was a problem");
       },
       success: function(data){
+        console.log(data.leaderboard);
         var table = $('<table class="table table-hover"></table>');
         data.leaderboard.map(function(value,index){
           table.append('<tr><td>' + value.name + '</td>' + '<td>' + value.solo_mmr + '</td>' + '</tr>');
