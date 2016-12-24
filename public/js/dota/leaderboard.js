@@ -1,11 +1,11 @@
-
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-  var target = $(e.target).attr("href") ;// activated tab
-  
-  if ($(target).is(':empty')) {
-    $.ajax({
+$( document ).ready(function() {
+    loadData("#americas");
+});
+function loadData(target){
+  $.ajax({
       type: "GET",
       url: "http://jangkoo.com/projects/dota/leaderboards.php?division="+target.substr(1),
+      // url: "http://localhost/dota/leaderboards.php?division="+target.substr(1),
       error: function(data){
         alert("There was a problem");
       },
@@ -17,6 +17,12 @@ $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         })
         $(target).html(table);
       }
-  })
+  });
+}
+$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+  var target = $(e.target).attr("href") ;// activated tab
+  if ($(target).is(':empty')) {
+    loadData(target);
+    
  }
-})
+});
