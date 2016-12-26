@@ -13,10 +13,10 @@ html * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 body {
   font-size: 100%;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
   color: #3e3947;
   background-color: white;
 }
@@ -69,21 +69,7 @@ Main components
 .cd-section:nth-of-type(even) p {
   color: #bda3ad;
 }
-.cd-section h1, .cd-section p {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  width: 90%;
-  max-width: 768px;
-  text-align: center;
-}
+
 .cd-section h1 {
   color: white;
   font-weight: 300;
@@ -354,4 +340,10 @@ Main components
   width: 90%;
   max-width: 768px;
   text-align: center;
+}
+li:not(:last-child) {
+    margin-bottom: 5px;
+}
+.row {
+  margin-bottom: 20px;
 }
