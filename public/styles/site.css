@@ -5927,3 +5927,6 @@ button.close {
 .top-pad {
   top: 50px;
   position: relative; }
+
+.navbar {
+  margin-bottom: 0px; }

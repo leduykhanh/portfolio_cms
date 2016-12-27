@@ -16,15 +16,15 @@ block content
 			li
 				a(href="#section1", data-number="1")
 					span(class="cd-dot")
-					span(class="cd-label")	Intro
+					span(class="cd-label")	Summary
 			li
 				a(href="#section2", data-number="2")
 					span(class="cd-dot")
-					span(class="cd-label")	About
+					span(class="cd-label")	Porfolios
 			li
 				a(href="#section3",data-number="3")
 					span(class="cd-dot")
-					span(class="cd-label")	Features
+					span(class="cd-label")	Working Experience
 			li
 				a(href="#section4", data-number="4")
 					span(class="cd-dot")
@@ -38,9 +38,6 @@ block content
 					span(class="cd-dot")
 					span(class="cd-label")	Contact
 
-	a(class="cd-nav-trigger, cd-img-replace")
-		Open navigation
-			span
 
 	section(id="section1", class="cd-section")
 		.container
@@ -58,20 +55,34 @@ block content
 						li Having in hand four years of working experience as software engineer in Singapore
 						li Hands-on person who is able to handle different fields,hardware and software, front end and backend
 			.row(style="color:white;")
+				- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress"],["Postgres","MySQL","MongoDB"]]
 				h2 Technical skills
-				span.badge Html + span.badge Html
+				ul
+					each skill_set in skills
+						li 
+							each skill in skill_set
+								span.badge #{skill}
+
+
 			.row(style="color:white;")
 				h2 Social profiles
+				.social
+					<i class="fa fa-stack-overflow fa-5" aria-hidden="true"></i>
+					<i class="fa fa-github fa-5" aria-hidden="true"></i>
 
 
-	section(id="section2", class="cd-section text-center")
-
+	section(id="section2", class="cd-section")
+		.container
+			.row 
+				h1 Porfolios
+				hr
 
 
 	section(id="section3", class="cd-section")
-		p
-			&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;
-
+		.container
+			.row 
+				h1 Working Experience
+				hr
 	section(id="section4", class="cd-section")
 		p
 			&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis, culpa ad atque eveniet praesentium nobis expedita similique beatae tenetur. Distinctio vel tenetur, id cum.&rdquo;

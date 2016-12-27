@@ -347,3 +347,6 @@ li:not(:last-child) {
 .row {
   margin-bottom: 20px;
 }
+ul {
+  margin: 10px;
+}
