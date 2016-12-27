@@ -46,17 +46,17 @@ block content
 				hr
 			.row
 				.col-sm-6
-					.img-circle.text-center(style="background-image:url('/images/TKN_9872.JPG');width:300px;height:300px;background-size:cover")
+					.img-circle.text-center.profile-pic(style="background-image:url('/images/TKN_9872.JPG');width:300px;height:300px;background-size:cover")
 				.col-sm-6(style="font-weight:200; color:wheat;font-size: 1.25rem;")
-					h5 My name is Le Duy Khanh, a Full Stack Developer in Singapore
-					ul(style="list-style-type:square")
+					h5(style="font-weight:250; color:wheat;font-size: 1.5rem;margin-top:20px") My name is <b>Le Duy Khanh</b>, a Full Stack Developer in Singapore
+					ul.summary(style="list-style-type:square")
 						li I am from Vietnam
 						li Graduated Nanyang Technological University  with Second Class Honor
 						li Having in hand four years of working experience as software engineer in Singapore
 						li Hands-on person who is able to handle different fields,hardware and software, front end and backend
 			.row(style="color:white;")
-				- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress"],["Postgres","MySQL","MongoDB"]]
-				h2 Technical skills
+				- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress","Orchard CMS"],["Postgres","MySQL","MongoDB","MSSQL"],["Gulp","Bower","Composer"]]
+				.skill-title Technical skills
 				ul
 					each skill_set in skills
 						li 
@@ -65,10 +65,14 @@ block content
 
 
 			.row(style="color:white;")
-				h2 Social profiles
+				.skill-title Social profiles
 				.social
-					<i class="fa fa-stack-overflow fa-5" aria-hidden="true"></i>
-					<i class="fa fa-github fa-5" aria-hidden="true"></i>
+					a(href="http://stackoverflow.com/users/1737861/le-duy-khanh",data-toggle="tooltip" title="Stack overflow")
+						<i class="fa fa-stack-overflow fa-5" aria-hidden="true"></i>
+					a(href="https://github.com/leduykhanh",data-toggle="tooltip" title="Github")
+						<i class="fa fa-github fa-5" aria-hidden="true"></i>
+					a(href="https://www.linkedin.com/in/le-duy-khanh-62158b44",data-toggle="tooltip" title="Linkedin")
+						<i class="fa fa-linkedin fa-5" aria-hidden="true"></i>
 
 
 	section(id="section2", class="cd-section")
@@ -76,7 +80,31 @@ block content
 			.row 
 				h1 Porfolios
 				hr
-
+			.row
+				.col-sm-4
+					-var tech_stacks = ["Django", "ReactJS", "Python", "Javascript"]
+					.portfolio(style="background-image:url('/images/waach.png');")
+						.portfolio-header 
+							.name Waach - video distribution platform
+						.description
+							each tech in tech_stacks
+								span.badge #{tech}
+				.col-sm-4
+					-var tech_stacks = ["Django", "ReactJS", "Python", "Javascript"]
+					.portfolio(style="background-image:url('/images/goalsmapper.png');")
+						.portfolio-header(style="background-color: rgba(100, 204, 33, 0.8); ") 
+							.name Goalsmapper - finacial plan
+						.description
+							each tech in tech_stacks
+								span.badge #{tech}
+				.col-sm-4
+					-var tech_stacks = ["Prestashop", "PHP", "MySQL"]
+					.portfolio(style="background-image:url('/images/tutti.png');")
+						.portfolio-header(style="background-color: rgba(255, 255, 33, 0.8); ") 
+							.name Tutti - online shopping
+						.description
+							each tech in tech_stacks
+								span.badge #{tech}
 
 	section(id="section3", class="cd-section")
 		.container
