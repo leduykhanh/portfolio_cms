@@ -54,19 +54,13 @@ jQuery(document).ready(function($){
 	}
 
     $('[data-toggle="tooltip"]').tooltip();  
-     $('.box').hover(function(){
-        $(this).stop().animate({top:'-176px'},{queue:false,duration:300});
-		$(".caption",this).stop().animate({height:'100px'},{queue:false,duration:500});
-		$(".boxes").stop().animate({bottom:'-80px'},{queue:false,duration:300});
-		//$(".box-area").animate({top:'20%'},{queue:false,duration:300});
-		//$(".chevron-right,.chevron-left").css({display:"block"});
+    $('.portfolio').hover(function(){
+        $(this).stop().animate({top:'-10px'},{queue:false,duration:300});
+		$(".description",this).stop().animate({height:'200px',paddingTop:"30px",opacity:0.8},{queue:false,duration:500});
 		
     }, function() {
         $(this).stop().animate({top:'0px'},{queue:false,duration:300});
-		$(".caption",this).stop().animate({height:'0px'},{queue:false,duration:500});
-		$(".box-area").animate({top:'70%'},{queue:false,duration:300});
-		$(".boxes").stop().animate({bottom:'-100px'},{queue:false,duration:300});
-		//$(".chevron-right,.chevron-left").css({display:"none"});
+		$(".description",this).stop().animate({height:'0px',paddingTop:"0px",opacity:0},{queue:false,duration:500});
     }); 
 
 });

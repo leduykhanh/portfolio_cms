@@ -365,6 +365,7 @@ li:not(:last-child) {
   min-height: 500px;
   background-size:cover;
   position: relative;
+  margin-bottom: 30px;
 }
 .portfolio-header{
   background-color: rgba(226, 88, 41, 0.8); 
@@ -376,8 +377,13 @@ li:not(:last-child) {
 .description{
   position: absolute;
   bottom: 0px;
-  height: 200px;
+  height: 0px;
   background-color: rgba(226, 88, 41, 0.8); 
+  opacity: 0;
   width:100%;
-  padding: 30px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
+}
+.url a{
+  color: white;
+  margin-bottom: 20px;
 }

@@ -55,24 +55,32 @@ block content
 						li Having in hand four years of working experience as software engineer in Singapore
 						li Hands-on person who is able to handle different fields,hardware and software, front end and backend
 			.row(style="color:white;")
-				- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress","Orchard CMS"],["Postgres","MySQL","MongoDB","MSSQL"],["Gulp","Bower","Composer"]]
-				.skill-title Technical skills
-				ul
-					each skill_set in skills
-						li 
-							each skill in skill_set
-								span.badge #{skill}
+				.col-sm-6
+					.skill-title Current Company
+					.company
+						a(href="http://www.goldenequator.com/")
+							img(src="/images/company.png")
+				.col-sm-6
+					- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress","Orchard CMS"],["Postgres","MySQL","MongoDB","MSSQL"],["Gulp","Bower","Composer"]]
+					.skill-title Technical skills
+					ul
+						each skill_set in skills
+							li 
+								each skill in skill_set
+									span.badge #{skill}
 
 
 			.row(style="color:white;")
-				.skill-title Social profiles
-				.social
-					a(href="http://stackoverflow.com/users/1737861/le-duy-khanh",data-toggle="tooltip" title="Stack overflow")
-						<i class="fa fa-stack-overflow fa-5" aria-hidden="true"></i>
-					a(href="https://github.com/leduykhanh",data-toggle="tooltip" title="Github")
-						<i class="fa fa-github fa-5" aria-hidden="true"></i>
-					a(href="https://www.linkedin.com/in/le-duy-khanh-62158b44",data-toggle="tooltip" title="Linkedin")
-						<i class="fa fa-linkedin fa-5" aria-hidden="true"></i>
+				.col-sm-6
+					.skill-title Social profiles
+					.social
+						a(href="http://stackoverflow.com/users/1737861/le-duy-khanh",data-toggle="tooltip" title="Stack overflow")
+							<i class="fa fa-stack-overflow fa-5" aria-hidden="true"></i>
+						a(href="https://github.com/leduykhanh",data-toggle="tooltip" title="Github")
+							<i class="fa fa-github fa-5" aria-hidden="true"></i>
+						a(href="https://www.linkedin.com/in/le-duy-khanh-62158b44",data-toggle="tooltip" title="Linkedin")
+							<i class="fa fa-linkedin fa-5" aria-hidden="true"></i>
+				.col-sm-6
 
 
 	section(id="section2", class="cd-section")
@@ -85,8 +93,10 @@ block content
 					-var tech_stacks = ["Django", "ReactJS", "Python", "Javascript"]
 					.portfolio(style="background-image:url('/images/waach.png');")
 						.portfolio-header 
-							.name Waach - video distribution platform
+							.name Waach - video platform
 						.description
+							.url 
+								a(href="waach.com") waach.com
 							each tech in tech_stacks
 								span.badge #{tech}
 				.col-sm-4
