@@ -36,3 +36,35 @@
 .navbar {
 	margin-bottom:0px;
 }
+/*Social Icons*/
+.socialicon {
+	position: relative;
+	display: inline-block;
+	width: 27px;
+	margin-right: 5px;
+	height: 27px;
+}
+.socialicon-twitter {
+	background: url('../images/social/twitter.png') no-repeat;
+}
+.socialicon-facebook {
+	background: url('../images/social/facebook.png') no-repeat;
+}
+.socialicon-google {
+	background: url('../images/social/google.png') no-repeat;
+}
+.socialicon-mail {
+	background: url('../images/social/mail.png') no-repeat;
+}
+.socialicon-twitter:hover {
+	background: url('../images/social/twitter_a.png') no-repeat;
+}
+.socialicon-facebook:hover {
+	background: url('../images/social/facebook_a.png') no-repeat;
+}
+.socialicon-google:hover {
+	background: url('../images/social/google_a.png') no-repeat;
+}
+.socialicon-mail:hover {
+	background: url('../images/social/mail_a.png') no-repeat;
+}
