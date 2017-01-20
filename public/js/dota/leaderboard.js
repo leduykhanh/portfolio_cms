@@ -4,7 +4,7 @@ $( document ).ready(function() {
 function loadData(target){
   $.ajax({
       type: "GET",
-      url: "http://jangkoo.com/projects/dota/leaderboards.php?division="+target.substr(1),
+      url: "/projects/dota/leaderboards.php?division="+target.substr(1),
       // url: "http://localhost/dota/leaderboards.php?division="+target.substr(1),
       error: function(data){
         alert("There was a problem");
