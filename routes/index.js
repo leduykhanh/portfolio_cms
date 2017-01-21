@@ -20,6 +20,7 @@
 
 var keystone = require('keystone');
 var middleware = require('./middleware');
+var passport = require('passport');
 var importRoutes = keystone.importer(__dirname);
 
 // Common Middleware
@@ -32,6 +33,13 @@ var routes = {
 	auth: importRoutes('./auth'),
 };
 
+	passport.serializeUser(function(user, done) {
+	  done(null, user);
+	});
+
+	passport.deserializeUser(function(user, done) {
+	  done(null, user);
+	});
 // Setup Route Bindings
 exports = module.exports = function (app) {
 	// Views
@@ -49,6 +57,8 @@ exports = module.exports = function (app) {
 	app.all('/reset-password/:key', routes.views.session['reset-password']);
 	
 		// Authentication
+	app.use(passport.initialize());
+	app.use(passport.session());
 	app.all('/auth/confirm', routes.auth.confirm);
 	app.all('/auth/app', routes.auth.app);
 	app.all('/auth/:service', routes.auth.service);
