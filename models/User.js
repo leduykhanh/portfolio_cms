@@ -19,7 +19,17 @@ User.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
-}, 'Permissions', {
+}, 'Profile', {
+	isPublic: { type: Boolean, default: true },
+	isOrganiser: Boolean,
+	photo: { type: Types.CloudinaryImage },
+	github: { type: String, width: 'short' },
+	twitter: { type: String, width: 'short' },
+	website: { type: Types.Url },
+	bio: { type: Types.Markdown },
+	gravatar: { type: String, noedit: true }
+}, 
+'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
 },'Services', {
 	services: {
