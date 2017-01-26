@@ -170,6 +170,7 @@ exports = module.exports = function(req, res) {
 						state: 'enabled',
 						
 						website: locals.form.website,
+						photo: locals.authUser.avatar,
 						
 						isVerified: true,
 						
