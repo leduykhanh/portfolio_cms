@@ -14,7 +14,6 @@ exports = module.exports = function(req, res) {
 	locals.returnto = req.query.returnto;
 	
 	locals.authUser = req.session.auth;
-	console.log('confirm.js',req.session.auth);
 	locals.existingUser = false;
 	
 	// Reject request if no auth data is stored in session
