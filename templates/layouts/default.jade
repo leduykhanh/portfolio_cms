@@ -102,6 +102,9 @@ html
 							if user
 								if user.canAccessKeystone
 									li: a(href='/keystone') Open Admin
+								li: a(href='/me').user.hidden-xs
+										img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
+										=user.name.first
 								li: a(href='/keystone/signout') Sign Out
 							else
 								li: a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign in
