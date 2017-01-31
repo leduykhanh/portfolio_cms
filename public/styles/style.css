@@ -21,7 +21,7 @@ body {
   background-color: white;
 }
 
-body, html,#body {
+body, html,#body section{
   height: 100%;
 }
 
