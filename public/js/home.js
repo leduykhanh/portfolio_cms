@@ -59,13 +59,13 @@ function animateValue(id, start, end, duration) {
     }, stepTime);
 }
 $(window).scroll(function() {
-   var hT = $('#order-count').offset().top,
-       hH = $('#order-count').outerHeight(),
+   var hT = $('#order-counts').offset().top,
+       hH = $('#order-counts').outerHeight(),
        wH = $(window).height(),
        wS = $(this).scrollTop();
    if (wS > (hT+hH-wH)){
        animateValue("order-count",0,1532,1500);
-       animateValue("customer-count",0,53,1500);
+       animateValue("customer-count",0,53,500);
    }
 });
 
