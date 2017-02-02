@@ -67,5 +67,8 @@ $(window).scroll(function() {
        animateValue("order-count",0,1532,1500);
        animateValue("customer-count",0,53,500);
    }
+   if (wS > wH){
+    $(".navbar-inverse").css({"background-color": rgba(225,225,225,0.4), "color":"black"});
+   }
 });
 
