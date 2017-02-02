@@ -58,5 +58,14 @@ function animateValue(id, start, end, duration) {
         }
     }, stepTime);
 }
-animateValue("order-count",0,53,1.5);
-animateValue("customer-count",0,53,1.5);
+$(window).scroll(function() {
+   var hT = $('#order-count').offset().top,
+       hH = $('#order-count').outerHeight(),
+       wH = $(window).height(),
+       wS = $(this).scrollTop();
+   if (wS > (hT+hH-wH)){
+       animateValue("order-count",0,1532,1500);
+       animateValue("customer-count",0,53,1500);
+   }
+});
+
