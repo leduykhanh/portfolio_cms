@@ -392,10 +392,15 @@ li:not(:last-child) {
 }
 .panel-title img{
   height: 40px;
+  vertical-align: center;
 }
 .panel-title a{
   vertical-align: center;
   font-weight: bold;
   margin-left: 15px;
   text-decoration: none;
+  cursor: pointer;
+}
+#contact a{
+  color:yellow;
 }
