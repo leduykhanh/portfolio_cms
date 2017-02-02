@@ -29,6 +29,7 @@ html
 			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
 			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
 		//-[endif]
+		include ../includes/layout/pageads
 
 		//- Include template-specific stylesheets by extending the css block
 		block css
@@ -139,7 +140,6 @@ html
 						.modal-content
 							+auth-forms({ modal: true, initial: 'signin' })
 
-			include ../includes/layout/pageads
 		//- FOOTER
 		.container: #footer
 			include ../includes/layout/footer
