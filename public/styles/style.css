@@ -395,4 +395,7 @@ li:not(:last-child) {
 }
 .panel-title a{
   vertical-align: center;
+  font-weight: bold;
+  margin-left: 15px;
+  text-decoration: none;
 }
