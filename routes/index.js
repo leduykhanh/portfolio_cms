@@ -75,10 +75,10 @@ exports = module.exports = function (app) {
 	//Dota
 	app.all('/dota/leaderboards', routes.views.dota.leaderboards);
 	// API
-	app.get('/api/post/list', keystone.initAPI, routes.api.posts.list);
-	app.all('/api/post/create', keystone.initAPI, routes.api.posts.create);
-	app.get('/api/post/:id', keystone.initAPI, routes.api.posts.get);
-	app.all('/api/post/:id/update', keystone.initAPI, routes.api.posts.update);
-	app.get('/api/post/:id/remove', keystone.initAPI, routes.api.posts.remove);
+	app.get('/api/post/list', keystone.middleware.api, routes.api.posts.list);
+	app.all('/api/post/create', keystone.middleware.api, routes.api.posts.create);
+	app.get('/api/post/:id', keystone.middleware.api, routes.api.posts.get);
+	app.all('/api/post/:id/update', keystone.middleware.api, routes.api.posts.update);
+	app.get('/api/post/:id/remove', keystone.middleware.api, routes.api.posts.remove);
 
 };

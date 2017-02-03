@@ -5962,3 +5962,6 @@ button.close {
 
 .socialicon-mail:hover {
   background: url("../images/social/mail_a.png") no-repeat; }
+
+#order-counts {
+  font-size: 30px; }
