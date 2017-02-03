@@ -31,6 +31,7 @@ keystone.pre('render', middleware.flashMessages);
 var routes = {
 	views: importRoutes('./views'),
 	auth: importRoutes('./auth'),
+	api: importRoutes('./api')
 };
 
 	passport.serializeUser(function(user, done) {
@@ -73,5 +74,11 @@ exports = module.exports = function (app) {
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	//Dota
 	app.all('/dota/leaderboards', routes.views.dota.leaderboards);
+	// API
+	app.get('/api/post/list', keystone.initAPI, routes.api.posts.list);
+	app.all('/api/post/create', keystone.initAPI, routes.api.posts.create);
+	app.get('/api/post/:id', keystone.initAPI, routes.api.posts.get);
+	app.all('/api/post/:id/update', keystone.initAPI, routes.api.posts.update);
+	app.get('/api/post/:id/remove', keystone.initAPI, routes.api.posts.remove);
 
 };
