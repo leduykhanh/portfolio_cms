@@ -68,8 +68,12 @@ $(window).scroll(function() {
        animateValue("customer-count",0,53,500);
    }
    if (wS > 35){
-    $(".navbar-inverse").css({"background-color": "rgba(225,225,225,0.4)", "color":"black"});
+    $(".navbar-inverse").css({"background-color": "rgba(225,225,225,0.4)"});
+    $(".navbar-inverse .navbar-nav > li > a").css({"color":"black"});
    }
-   else $(".navbar-inverse").css({"background-color": "rgba(0,0,0,1)", "color":"white"});
+   else {
+    $(".navbar-inverse").css({"background-color": "rgba(0,0,0,1)", "color":"white"});
+    $(".navbar-inverse .navbar-nav > li > a").css({"color":"white"});
+  }
 });
 
