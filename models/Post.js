@@ -27,6 +27,11 @@ Post.add({
 Post.schema.virtual('content.full').get(function () {
 	return this.content.extended || this.content.brief;
 });
+/**
+ * Relationships
+ * =============
+ */
 
+Post.relationship({ ref: 'PostComment', refPath: 'post', path: 'comments' });
 Post.defaultColumns = 'title, state|20%, author|20%, publishedDate|20%';
 Post.register();

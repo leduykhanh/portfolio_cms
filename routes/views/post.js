@@ -23,9 +23,10 @@ exports = module.exports = function (req, res) {
 		}).populate('author categories');
 
 		q.exec(function (err, result) {
+			if (err) return res.err(err);
+			if (!result) return res.notfound('Post not found');
 			locals.data.post = result;
 			locals.data.post.populateRelated('comments[author]', next);
-			next(err);
 		});
 
 	});

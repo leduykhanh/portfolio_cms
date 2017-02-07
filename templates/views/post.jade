@@ -30,7 +30,6 @@ block content
 					!= data.post.content.full
 
 						.comments
-							h1 Comments
 							h4.mb-1=data.post.comments.length == 0 ? 'Be the first to reply' : plural(post.comments.length, '* comment', '* comments')
 							for comment in data.post.comments
 								if comment.author
