@@ -28,9 +28,10 @@ block content
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
-					
+
 					//- Comment
 						.comments
+							h1 Comments
 							h4.mb-1=post.comments.length == 0 ? 'Be the first to reply' : plural(post.comments.length, '* comment', '* comments')
 							for comment in post.comments
 								if comment.author
