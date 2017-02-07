@@ -24,11 +24,38 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, result) {
 			locals.data.post = result;
+			locals.data.post.populateRelated('comments[author]', next);
 			next(err);
 		});
 
 	});
 
+	view.on('post', { action: 'create-comment' }, function(next) {
+
+		// handle form
+		var newPostComment = new PostComment.model({
+				post: locals.data.post.id,
+				author: locals.user.id
+			}),
+			updater = newPostComment.getUpdateHandler(req, res, {
+				errorMessage: 'There was an error creating your comment:'
+			});
+
+		updater.process(req.body, {
+			flashErrors: true,
+			logErrors: true,
+			fields: 'content'
+		}, function(err) {
+			if (err) {
+				locals.validationErrors = err.errors;
+			} else {
+				req.flash('success', 'Your comment has been added successfully.');
+				return res.redirect('/blog/post/' + locals.data.post.slug);
+			}
+			next();
+		});
+
+	});
 	// Load other posts
 	view.on('init', function (next) {
 
