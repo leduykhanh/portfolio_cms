@@ -30,7 +30,7 @@ block content
 					!= data.post.content.full
 
 						.comments
-							h4.mb-1=data.post.comments.length == 0 ? 'Be the first to reply' : plural(post.comments.length, '* comment', '* comments')
+							h4.mb-1=data.post.comments.length == 0 ? 'Be the first to reply' : (data.post.comments.length + ' comment')
 							for comment in data.post.comments
 								if comment.author
 									.comment.media
@@ -39,7 +39,7 @@ block content
 										.media-body
 											h6.mt-0
 												=comment.author.name.full
-												span.text-muted  &middot; #{moment(comment.publishedOn).fromNow()}
+												//- span.text-muted  &middot; #{moment(comment.publishedOn).fromNow()}
 											!=comment.content.html
 						if user
 							//- Reply form

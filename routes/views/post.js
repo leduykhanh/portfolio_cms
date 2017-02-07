@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var PostComment = keystone.list('PostComment');
 
 exports = module.exports = function (req, res) {
 
