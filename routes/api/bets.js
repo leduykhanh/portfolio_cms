@@ -2,6 +2,7 @@ var async = require('async'),
 	keystone = require('keystone');
 
 var Bet = keystone.list('Bet');
+var BetUser = keystone.list("BetUser");
 
 /**
  * List Bets
@@ -41,7 +42,7 @@ exports.get = function(req, res) {
 exports.create = function(req, res) {
 	
 	var item = new Bet.model(),
-		data = (req.method == 'Bet') ? req.body : req.query;
+		data = (req.method == 'POST') ? req.body : req.query;
 	
 	item.getUpdateHandler(req).process(data, function(err) {
 		
@@ -96,4 +97,30 @@ exports.remove = function(req, res) {
 		});
 		
 	});
+}
+
+/**
+ * Place a Bet
+ */
+exports.place = function(req, res) {
+	
+	var data = (req.method == 'POST') ? req.body : req.query;
+	if (!data.betId || !data.userId) return res.apiError('wrong request payload');
+	BetUser.model.findOne({bet: data.betId, user: data.userId}).exec(function(err, bets){
+		if (bets){
+
+			return res.apiError('you placed the bet for this bet', bets);
+		}
+		item = new BetUser.model({bet: data.betId, user: data.userId});
+		item.getUpdateHandler(req).process(data, function(err) {
+		
+		if (err) return res.apiError('error', err);
+		
+		res.apiResponse({
+			bet: item
+		});
+		
+	});
+	});
+
 }

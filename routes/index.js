@@ -84,8 +84,12 @@ exports = module.exports = function (app) {
 	//bet API
 	app.get('/api/bet/list', keystone.middleware.api, routes.api.bets.list);
 	app.all('/api/bet/create', keystone.middleware.api, routes.api.bets.create);
+	app.all('/api/bet/place', keystone.middleware.api, routes.api.bets.place);
 	app.get('/api/bet/:id', keystone.middleware.api, routes.api.bets.get);
 	app.all('/api/bet/:id/update', keystone.middleware.api, routes.api.bets.update);
 	app.get('/api/bet/:id/remove', keystone.middleware.api, routes.api.bets.remove);
+	//auth API
+	app.post('/api/auth/signin', keystone.middleware.api, routes.api.auth.signin);
+	app.get('/api/auth/signout', keystone.middleware.api, routes.api.auth.signout);
 
 };
