@@ -23,7 +23,7 @@ Bet.add({
 	secondTeamBets: { type: Number, default: 0 },
 	drawBets: { type: Number, default: 0 },
 	result : { type: Number, default: 0 }, // 1 2 0
-	expireDate: { type: Types.Date, index: true},
+	expireDate: { type: Types.Datetime, index: true},
 	image: { type: Types.CloudinaryImage },
 	categories: { type: Types.Relationship, ref: 'BetCategory', many: true },
 });
