@@ -81,4 +81,11 @@ exports = module.exports = function (app) {
 	app.all('/api/post/:id/update', keystone.middleware.api, routes.api.posts.update);
 	app.get('/api/post/:id/remove', keystone.middleware.api, routes.api.posts.remove);
 
+	//bet API
+	app.get('/api/bet/list', keystone.middleware.api, routes.api.bets.list);
+	app.all('/api/bet/create', keystone.middleware.api, routes.api.bets.create);
+	app.get('/api/bet/:id', keystone.middleware.api, routes.api.bets.get);
+	app.all('/api/bet/:id/update', keystone.middleware.api, routes.api.bets.update);
+	app.get('/api/bet/:id/remove', keystone.middleware.api, routes.api.bets.remove);
+
 };

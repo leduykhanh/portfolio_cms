@@ -28,7 +28,12 @@ User.add({
 	website: { type: Types.Url },
 	bio: { type: Types.Markdown },
 	gravatar: { type: String, noedit: true }
-}, 
+}, 'Bet', {
+	gold : { type: Number, default: 1000 },
+	totalBet : { type: Number, default: 0 },
+	win : { type: Number, default: 0 },
+	rank : { type: Number, default: 1000 },
+},
 'Permissions', {
 	isAdmin: { type: Boolean, label: 'Can access Keystone', index: true },
 },'Services', {
