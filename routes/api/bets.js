@@ -12,9 +12,9 @@ exports.list = function(req, res) {
 		
 		if (err) return res.apiError('database error', err);
 		
-		res.apiResponse({
-			Bets: items
-		});
+		res.apiResponse(
+			items
+		);
 		
 	});
 }
