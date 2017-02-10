@@ -91,5 +91,7 @@ exports = module.exports = function (app) {
 	//auth API
 	app.post('/api/auth/signin', keystone.middleware.api, routes.api.auth.signin);
 	app.get('/api/auth/signout', keystone.middleware.api, routes.api.auth.signout);
+	// user API
+	app.get('/api/user/:id', keystone.middleware.api, routes.api.users.get);
 
 };
