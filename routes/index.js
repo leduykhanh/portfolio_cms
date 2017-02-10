@@ -90,6 +90,7 @@ exports = module.exports = function (app) {
 	app.get('/api/bet/:id/remove', keystone.middleware.api, routes.api.bets.remove);
 	//auth API
 	app.post('/api/auth/signin', keystone.middleware.api, routes.api.auth.signin);
+	app.post('/api/auth/signinfacebook', keystone.middleware.api, routes.api.auth.signinfacebook);
 	app.get('/api/auth/signout', keystone.middleware.api, routes.api.auth.signout);
 	// user API
 	app.get('/api/user/:id', keystone.middleware.api, routes.api.users.get);
