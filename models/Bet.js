@@ -14,8 +14,8 @@ var Bet = new keystone.List('Bet', {
 
 Bet.add({
 	name : {type: String, required: true},
-	firstTeam: { name: {type:String}, logo: { type: Types.CloudinaryImage } },
-	secondTeam: { name: {type:String}, logo: { type: Types.CloudinaryImage } },
+	firstTeam: { name: {type:String}, logo: { type: String } },
+	secondTeam: { name: {type:String}, logo: { type: String } },
 	state: { type: Types.Select, options: 'draft, live, defunct ', default: 'draft', index: true },
 	firstScore: { type: Number, default: 0 },
 	secondScore: { type: Number, default: 0 },
