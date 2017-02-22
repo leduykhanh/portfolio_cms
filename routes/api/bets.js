@@ -13,7 +13,7 @@ exports.list = function(req, res) {
 			perPage: 10,
 			maxPages: 10,
 			filters: {
-				state: 'published',
+				state: 'live',
 			},
 		})
 	.exec(function(err, items) {
