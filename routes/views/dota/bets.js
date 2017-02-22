@@ -15,13 +15,25 @@ exports = module.exports = function (req, res) {
 		// Load other posts
 	view.on('init', function (next) {
 
-		var q = keystone.list('Bet').model.find().where('state', 'live').sort('-expireDate').populate('categories').limit('4');
+		var q = keystone.list('Bet').paginate({
+			page: req.query.page || 1,
+			perPage: 10,
+			maxPages: 10,
+			filters: {
+				state: 'live',
+			},
+		})
+			.sort('-expireDate')
+			.populate('categories');
+
+		if (locals.data.category) {
+			q.where('categories').in([locals.data.category]);
+		}
 
 		q.exec(function (err, results) {
 			locals.data.bets = results;
 			next(err);
 		});
-
 	});
 
 	// Render the view
