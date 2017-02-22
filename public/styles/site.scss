@@ -20,6 +20,9 @@
 
 // Add your own site style includes here
 @import "site/layout";
+body,html{
+	height: 100%;
+}
 .top-header {
   position: fixed;
   top: 0;
@@ -28,6 +31,7 @@
 #body{
   top:34px;
   position: relative;
+  min-height: 100%;
 }
 .top-pad{
 	top:50px;
