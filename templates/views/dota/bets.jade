@@ -8,7 +8,9 @@ mixin bet(bet)
 			.row 
 				img(width=200 height=200  src=bet.firstTeam.logo)
 			.row #{(bet.firstTeamBets + 1)*100/total} %
-		.col-sm-4 0 - 0
+		.col-sm-4 
+			.row
+			.row #{bet.firstScore} - #{bet.secondScore}
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
 			.row 
