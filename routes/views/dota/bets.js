@@ -10,5 +10,5 @@ exports = module.exports = function (req, res) {
 	locals.section = 'dota';
 
 	// Render the view
-	view.render('dota/bet');
+	view.render('dota/bets');
 };
