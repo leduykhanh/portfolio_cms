@@ -8,7 +8,15 @@ var BetUser = keystone.list("BetUser");
  * List Bets
  */
 exports.list = function(req, res) {
-	Bet.model.find(function(err, items) {
+	Bet.paginate({
+			page: req.query.page || 1,
+			perPage: 10,
+			maxPages: 10,
+			filters: {
+				state: 'published',
+			},
+		})
+	.exec(function(err, items) {
 		
 		if (err) return res.apiError('database error', err);
 		
