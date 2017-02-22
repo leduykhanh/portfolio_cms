@@ -13,7 +13,7 @@ function loadData(target){
         
         var table = $('<table class="table table-hover text-left"></table>');
         JSON.parse(data).leaderboard.map(function(value,index){
-          var team_tag = value.team_tag?value.team_tag + '.' : '';
+          var team_tag = value.team_tag != undefined ?value.team_tag + '.' : '';
           table.append('<tr><td>' + value.rank + '</td><td>' + team_tag + value.name +'</td><td>' + '<span class="flag-icon flag-icon-'+ value.country+'"></span>' + '</td><td>' + '</td>' + '<td>' + value.solo_mmr + '</td>' + '</tr>');
         })
         $(target).html(table);
