@@ -4,11 +4,13 @@ mixin bet(bet)
 	.row
 		.col-sm-4 
 			.row #{bet.firstTeam.name}
-			.row #{bet.firstTeam.logo}
+			.row 
+				img(src=#{bet.firstTeam.logo})
 		.col-sm-4 0 - 0
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
-			.row #{bet.secondTeam.logo}
+			.row 
+				img(src=#{bet.secondTeam.logo})
 
 block content
 	.container.text-center.top-pad
