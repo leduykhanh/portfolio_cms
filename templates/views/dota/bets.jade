@@ -7,15 +7,15 @@ mixin bet(bet)
 			.row #{bet.firstTeam.name}
 			.row 
 				img(width=200 height=200  src=bet.firstTeam.logo)
-			.row #{(bet.firstTeamBets + 1)*100/total} %
+			.row #{Math.round((bet.firstTeamBets + 1)*100/total)} %
 		.col-sm-4 
-			.row
+			.row -
 			.row #{bet.firstScore} - #{bet.secondScore}
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
 			.row 
 				img(width=200 height=200 src=bet.secondTeam.logo)
-			.row #{(bet.secondTeamBets + 1)*100/total} %
+			.row #{Math.round((bet.secondTeamBets + 1)*100/total)} %
 
 block content
 	.container.text-center.top-pad
