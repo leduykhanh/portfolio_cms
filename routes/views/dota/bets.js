@@ -8,6 +8,17 @@ exports = module.exports = function (req, res) {
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
 	locals.section = 'dota';
+		// Load other posts
+	view.on('init', function (next) {
+
+		var q = keystone.list('Bet').model.find().where('state', 'live').sort('-expireDate').populate('categories').limit('4');
+
+		q.exec(function (err, results) {
+			locals.data.bets = results;
+			next(err);
+		});
+
+	});
 
 	// Render the view
 	view.render('dota/bets');

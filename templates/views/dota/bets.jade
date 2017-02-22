@@ -1,4 +1,13 @@
 extends ../../layouts/default
 
+mixin bet(bet)
+	.row
+		.col-sm-4 bet.firstTeam.name
+		.col-sm-4
+		.col-sm-4 bet.secondTeam.name
+
 block content
-	h1 Live dota bets
+	.container.text-center.top-pad
+		h1 Live dota bets
+		each bet in data.bets.results
+			+bet(bet)
