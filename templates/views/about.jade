@@ -86,6 +86,17 @@ block content
 				hr
 			.row
 				.col-sm-4
+					-var tech_stacks = ["Django", "ReactJS", "Python", "Javascript","Redux"]
+					.portfolio(style="background-image:url('/images/afs.png');")
+						.portfolio-header 
+							.name Waach - video platform
+						.description
+							.url 
+								a(href="http://asiafundspace.com") asiafundspace.com
+							each tech in tech_stacks
+								span.badge #{tech}
+
+				.col-sm-4
 					-var tech_stacks = ["Django", "ReactJS", "Python", "Javascript"]
 					.portfolio(style="background-image:url('/images/waach.png');")
 						.portfolio-header 
@@ -101,6 +112,8 @@ block content
 						.portfolio-header(style="background-color: rgba(100, 204, 33, 0.8); ") 
 							.name Goalsmapper - finacial plan
 						.description
+							.url 
+								a(href="app.goalsmapper.com") app.goalsmapper.com
 							each tech in tech_stacks
 								span.badge #{tech}
 				.col-sm-4
