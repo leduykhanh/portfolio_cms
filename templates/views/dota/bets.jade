@@ -1,16 +1,18 @@
 extends ../../layouts/default
 
 mixin bet(bet)
-	.row
+	.row.bet-item
 		.col-sm-4 
 			.row #{bet.firstTeam.name}
 			.row 
-				img(src=bet.firstTeam.logo)
+				img(width=300 height=300  src=bet.firstTeam.logo)
+			.row 50%
 		.col-sm-4 0 - 0
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
 			.row 
-				img(src=bet.secondTeam.logo)
+				img(width=300 height=300 src=bet.secondTeam.logo)
+			.row 50%
 
 block content
 	.container.text-center.top-pad
