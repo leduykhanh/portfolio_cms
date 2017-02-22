@@ -1,18 +1,19 @@
 extends ../../layouts/default
 
 mixin bet(bet)
+	- var total = bet.firstTeamBets + bet.secondTeamBets + 2
 	.row.bet-item
 		.col-sm-4 
 			.row #{bet.firstTeam.name}
 			.row 
 				img(width=300 height=300  src=bet.firstTeam.logo)
-			.row 50%
+			.row #{(bet.firstTeamBets + 1)/total} %
 		.col-sm-4 0 - 0
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
 			.row 
 				img(width=300 height=300 src=bet.secondTeam.logo)
-			.row 50%
+			.row #{(bet.secondTeamBets + 1)/total} %
 
 block content
 	.container.text-center.top-pad
