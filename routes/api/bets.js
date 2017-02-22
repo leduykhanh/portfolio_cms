@@ -3,6 +3,7 @@ var async = require('async'),
 
 var Bet = keystone.list('Bet');
 var BetUser = keystone.list("BetUser");
+var User = keystone.list("User");
 
 /**
  * List Bets
@@ -119,16 +120,46 @@ exports.place = function(req, res) {
 
 			return res.apiError('you placed the bet for this bet', bets);
 		}
+		var bet_item;
 		item = new BetUser.model({bet: data.betId, user: data.userId});
 		item.getUpdateHandler(req).process(data, function(err) {
 		
-		if (err) return res.apiError('error', err);
-		
-		res.apiResponse({
-			bet: item
+			if (err) return res.apiError('error', err);
+			Bet.model.findById(data.betId).exec(function(err, bet){
+				if (err) return res.apiError('database error', err);
+				
+				switch(parseInt(item.betChoice)){
+					case 0:
+						bet.drawTeamBets +=1;
+						break;
+					case 1:
+						bet.firstTeamBets +=1;
+						break;
+					case 2:
+						bet.secondTeamBets +=1;
+						break;
+				};
+				bet.drawTeamBets = 1000;
+				console.log(bet);
+				bet.save();
+				console.log(bet);
+				bet_item = bet;
+
+			});
+			User.model.findById(data.userId).exec(function(err, user){
+				if (err) return res.apiError('database error', err);
+				user.gold -= item.betAmount;
+				user.save();
+
+				res.apiResponse({
+					bet_detail : item,
+					user : user,
+					bet : bet_item
+					});
+			
+			});
+
 		});
-		
-	});
 	});
 
 }

@@ -5915,6 +5915,9 @@ button.close {
   max-width: 100%;
   height: auto; }
 
+body, html {
+  height: 100%; }
+
 .top-header {
   position: fixed;
   top: 0;
@@ -5922,7 +5925,8 @@ button.close {
 
 #body {
   top: 34px;
-  position: relative; }
+  position: relative;
+  min-height: 100%; }
 
 .top-pad {
   top: 50px;
@@ -5964,4 +5968,7 @@ button.close {
   background: url("../images/social/mail_a.png") no-repeat; }
 
 #order-counts {
+  font-size: 30px; }
+
+.bet-item {
   font-size: 30px; }
