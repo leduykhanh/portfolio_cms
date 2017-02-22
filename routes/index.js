@@ -74,6 +74,7 @@ exports = module.exports = function (app) {
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	//Dota
 	app.all('/dota/leaderboards', routes.views.dota.leaderboards);
+	app.all('/dota/bets', routes.views.dota.bets);
 	// API
 	app.get('/api/post/list', keystone.middleware.api, routes.api.posts.list);
 	app.all('/api/post/create', keystone.middleware.api, routes.api.posts.create);
