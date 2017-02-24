@@ -9,7 +9,7 @@ mixin bet(bet)
 				img(width="90%" height="auto"  src=bet.firstTeam.logo)
 			.row #{Math.round((bet.firstTeamBets + 1)*100/total)} %
 		.col-sm-4.col-xs-4 
-			.row.expireDate #{bet.expireDate}
+			.row.expireDate(time=bet.expireDate)
 			.row #{bet.firstScore} - #{bet.secondScore}
 		.col-sm-4.col-xs-4 
 			.row #{bet.secondTeam.name}
@@ -22,3 +22,5 @@ block content
 		h1 Live dota bets
 		each bet in data.bets.results
 			+bet(bet)
+block js
+	script(src='/js/dota/bets.js')
