@@ -80,4 +80,4 @@ $(window).scroll(function() {
     $(".navbar-inverse .navbar-nav > li > a").css({"color":"white"});
   }
 });
-
+mixpanel.track("#leader-board");
