@@ -3,15 +3,15 @@ extends ../../layouts/default
 mixin bet(bet)
 	- var total = bet.firstTeamBets + bet.secondTeamBets + 2
 	.row.bet-item
-		.col-sm-4 
+		.col-sm-4.col-xs-4 
 			.row #{bet.firstTeam.name}
 			.row 
 				img(width=200 height=200  src=bet.firstTeam.logo)
 			.row #{Math.round((bet.firstTeamBets + 1)*100/total)} %
-		.col-sm-4 
+		.col-sm-4.col-xs-4 
 			.row.expireDate #{bet.expireDate}
 			.row #{bet.firstScore} - #{bet.secondScore}
-		.col-sm-4 
+		.col-sm-4.col-xs-4 
 			.row #{bet.secondTeam.name}
 			.row 
 				img(width=200 height=200 src=bet.secondTeam.logo)
