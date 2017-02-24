@@ -9,7 +9,7 @@ mixin bet(bet)
 				img(width=200 height=200  src=bet.firstTeam.logo)
 			.row #{Math.round((bet.firstTeamBets + 1)*100/total)} %
 		.col-sm-4 
-			.row -
+			.row.expireDate #{bet.expireDate}
 			.row #{bet.firstScore} - #{bet.secondScore}
 		.col-sm-4 
 			.row #{bet.secondTeam.name}
