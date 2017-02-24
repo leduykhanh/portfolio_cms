@@ -4,7 +4,7 @@
 var x = setInterval(function() {
   var now = new Date().getTime();
   $( ".expireDate" ).each(function( index, bet ) {
-    var countDownDate = new Date(bet.attr("time")).getTime();
+    var countDownDate = new Date($(bet).attr("time")).getTime();
   // Get todays date and time
     
 
@@ -21,10 +21,10 @@ var x = setInterval(function() {
     if (minutes > 0) timeLeft += minutes + "m";
     // Display the result in the element with id="demo"
     if (distance > 0)
-      bet.html(timeLeft);
+      $(bet).html(timeLeft);
     else
     // If the count down is finished, write some text 
-      bet.html("past");
+      $(bet).html("past");
 });
  
 }, 60000);
