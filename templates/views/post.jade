@@ -35,7 +35,7 @@ block content
 								if comment.author
 									.comment.media
 										.pull-left
-											img(src=comment.author.photo.exists ? comment.author._.photo.thumbnail(60,60) : '/images/placeholders/user-60x60.jpg', alt=comment.author.name.full, width=40, height=40).media-object.img-circle
+											img(src=comment.author.photo.exists ? comment.author._.photo.thumbnail(60,60) : '/images/default-avatar.jpg', alt=comment.author.name.full, width=40, height=40).media-object.img-circle
 										.media-body
 											h6.mt-0
 												=comment.author.name.full

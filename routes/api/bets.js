@@ -130,7 +130,7 @@ exports.place = function(req, res) {
 				
 				switch(parseInt(item.betChoice)){
 					case 0:
-						bet.drawTeamBets +=1;
+						bet.drawBets +=1;
 						break;
 					case 1:
 						bet.firstTeamBets +=1;
@@ -141,7 +141,7 @@ exports.place = function(req, res) {
 				};
 				bet.save(function (err, bet) {
 				  if (err){ console.log(err); }
-				  console.log('saved bet: ', bet);
+				  // console.log('saved bet: ', bet);
 				  // place for other code after save operation..
 				});
 				bet_item = bet;
