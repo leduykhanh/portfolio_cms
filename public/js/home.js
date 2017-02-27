@@ -82,3 +82,5 @@ $(window).scroll(function() {
 });
 mixpanel.track("About");
 mixpanel.track("Leaderboards");
+mixpanel.track("Blog");
+mixpanel.track("Bets");
