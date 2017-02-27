@@ -139,10 +139,11 @@ exports.place = function(req, res) {
 						bet.secondTeamBets +=1;
 						break;
 				};
-				bet.drawTeamBets = 1000;
-				console.log(bet);
-				bet.save();
-				console.log(bet);
+				bet.save(function (err, bet) {
+				  if (err){ console.log(err); }
+				  console.log('saved bet: ', bet);
+				  // place for other code after save operation..
+				});
 				bet_item = bet;
 
 			});

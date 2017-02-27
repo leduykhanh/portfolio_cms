@@ -1,6 +1,7 @@
 
 function displayTime(bet){
        var countDownDate = new Date($(bet).attr("time")).getTime();
+       var now = new Date().getTime();
     // Get todays date and time
       
 
@@ -29,7 +30,7 @@ $( ".expireDate" ).each(function( index, bet ) {
 });
 // Update the count down every 1 second
 var x = setInterval(function() {
-  var now = new Date().getTime();
+  
   $( ".expireDate" ).each(function( index, bet ) {
     displayTime(bet);
     
