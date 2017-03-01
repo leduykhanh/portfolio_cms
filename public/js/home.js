@@ -71,7 +71,7 @@ $(window).scroll(function() {
      }
    }
    if (wS > 35){
-    $(".navbar-inverse").css({"background-color": "rgba(225,225,225,0.4)"});
+    $(".navbar-inverse").css({"background-color": "rgba(225,225,225,0.9)"});
     $(".navbar-inverse .navbar-nav > li > a").css({"color":"black"});
     $(".navbar-inverse .navbar-nav > .active > a").css({"color":"white","background-color": "rgba(0,0,0,0.9)"});
    }
