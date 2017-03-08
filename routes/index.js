@@ -95,5 +95,8 @@ exports = module.exports = function (app) {
 	app.get('/api/auth/signout', keystone.middleware.api, routes.api.auth.signout);
 	// user API
 	app.get('/api/user/:id', keystone.middleware.api, routes.api.users.get);
+	
+	// scrape API
+	app.get('/api/scrape', keystone.middleware.api, routes.api.scrape);
 
 };
