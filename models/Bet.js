@@ -9,7 +9,7 @@ var Types = keystone.Field.Types;
 var Bet = new keystone.List('Bet', {
 	track: true,
 	sortable: true,
-	autokey: { from: 'name', path: 'key', unique: true },
+	autokey: { from: 'slug', path: 'name', unique: true },
 });
 
 Bet.add({

@@ -61,13 +61,13 @@ exports = module.exports = function(req, res) {
 					// image: { type: Types.CloudinaryImage },
 	
 			};
-			
-			item.getUpdateHandler(req).process(data, function(err) {
-				
-				if (err) return res.apiError('error', err);
-
-				
-			});
+			if(moment(timeBet, "MMM D, YYYY - HH:mm").isValid())
+				item.getUpdateHandler(req).process(data, function(err) {
+					
+					if (err) return res.apiError('error', err);
+	
+					
+				});
 		})
 	// .log(console.log)
 	// .error(console.log)
