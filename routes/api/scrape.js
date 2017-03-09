@@ -57,11 +57,11 @@ exports = module.exports = function(req, res) {
 					// secondTeamBets: { type: Number, default: 0 },
 					// drawBets: { type: Number, default: 0 },
 					// result : { type: Number, default: 0 }, // 1 2 0
-					// expireDate: moment(timeBet, "MMM D, YYYY - HH:mm").toDate(),
+					expireDate: moment(timeBet, "MMM D, YYYY - HH:mm").toDate(),
 					// image: { type: Types.CloudinaryImage },
 	
 			};
-			if(moment(timeBet, "MMM D, YYYY - HH:mm").isValid())
+			if(moment(timeBet, "MMM D, YYYY - HH:mm").isValid() && name!=null && team1!=null && team2!=null)
 				item.getUpdateHandler(req).process(data, function(err) {
 					
 					if (err) return res.apiError('error', err);
