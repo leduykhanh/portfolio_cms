@@ -5,6 +5,7 @@ block head
 
 block js
 	script(src='/js/main.js')
+	script(src='/js/jspdf.min.js')
 	script(src='/js/save-pdf.js')
 
 block css
@@ -12,7 +13,7 @@ block css
 	link(href="/styles/reset.css", rel="stylesheet")
 
 block content
-	button#save-pdf(style="position:fixed;left:5px;top:50%") Save to pdf
+	button#save-pdf(style="position:fixed;left:5px;top:50%;color"white) Save to pdf
 	nav#cd-vertical-nav
 		ul
 			li
