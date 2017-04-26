@@ -26,7 +26,7 @@ var importRoutes = keystone.importer(__dirname);
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
-keystone.set('signout redirect', '/signout');
+keystone.set('signout redirect', '/');
 
 // Import Route Controllers
 var routes = {
