@@ -28,6 +28,7 @@ keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 keystone.set('signout redirect', '/');
 
+
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views'),
