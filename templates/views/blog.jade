@@ -3,9 +3,9 @@ extends ../layouts/default
 mixin post(post)
 	.post.card(data-ks-editable=editable(user, { list: 'Post', id: post.id }))
 		h2: a(href='/blog/post/' + post.slug)= post.title
-		p.lead.text-muted Posted 
+		p.lead.text-muted  
 			if post.publishedDate
-				| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+				| #{post._.publishedDate.format('MMMM Do, YYYY')} 
 			if post.categories && post.categories.length
 				| in 
 				each cat, i in post.categories
@@ -15,7 +15,7 @@ mixin post(post)
 					else
 						|  
 			if post.author
-				| by #{post.author.name.first}
+				| span.quote #{post.author.name.first}
 		if post.image.exists
 			img(src=post._.image.fit(160,160)).img.pull-right
 		p!= post.content.brief
