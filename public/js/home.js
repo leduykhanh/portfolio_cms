@@ -71,13 +71,13 @@ $(window).scroll(function() {
      }
    }
    if (wS > 35){
-    $(".navbar-inverse").css({"background-color": "rgba(225,225,225,0.9)"});
-    $(".navbar-inverse .navbar-nav > li > a").css({"color":"black"});
-    $(".navbar-inverse .navbar-nav > .active > a").css({"color":"white","background-color": "rgba(0,0,0,0.9)"});
+    $(".navbar-inverse").animate({"background-color": "rgba(225,225,225,0.9)"});
+    $(".navbar-inverse .navbar-nav > li > a").animate({"color":"black"});
+    $(".navbar-inverse .navbar-nav > .active > a").animate({"color":"white","background-color": "rgba(0,0,0,0.9)"});
    }
    else {
-    $(".navbar-inverse").css({"background-color": "rgba(0,0,0,1)", "color":"white"});
-    $(".navbar-inverse .navbar-nav > li > a").css({"color":"white"});
+    $(".navbar-inverse").animate({"background-color": "rgba(0,0,0,1)", "color":"white"});
+    $(".navbar-inverse .navbar-nav > li > a").animate({"color":"white"});
   }
 });
 mixpanel.track("About");
