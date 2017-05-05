@@ -2,7 +2,6 @@
 // =========
 
 // Bootstrap can be removed entirely by deleting this line.
-
 @import "bootstrap/bootstrap";
 
 // The easiest way to customise Bootstrap variables while
@@ -89,4 +88,10 @@ body,html{
   border-radius: 2px;
   background-clip: padding-box;
   padding:10px;
+}
+.navbar-brand{
+	font-family : $pacifico;
+}
+.quote{
+font-family : $pacifico;	
 }
