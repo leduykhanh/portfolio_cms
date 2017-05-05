@@ -28,7 +28,8 @@ block content
 					if data.post.image.exists
 						.image-wrap: img(src=data.post._.image.fit(750,450)).img-responsive
 					!= data.post.content.full
-
+					    .fb-share-button(data-href="http://jangkoo.com/blog/post/" + post.slug,data-layout="button_count")
+					    hr
 						.comments
 							h4.mb-1=data.post.comments.length == 0 ? 'Be the first to reply' : (data.post.comments.length + ' comment')
 							for comment in data.post.comments
