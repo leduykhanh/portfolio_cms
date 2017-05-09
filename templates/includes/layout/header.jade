@@ -1,33 +1,59 @@
-//- HEADER
-header(id='header', role='banner', class=(section == 'home' ? 'header--home' : 'header--page'))
-	nav.navbar(role='navigation'): .container
-		//- Site logo + site nav trigger button (on mobile)
-		.navbar-header
-			a(href='/', title='Back to Home').site-branding
-				include /public/images/logo.svg
-			//- User avatar
-			if user
-				a(href='/me').user.visible-xs
-					img(src=(user.photo.exists ? user._.photo.thumbnail(60,60) : user.gravatarUrl || '/images/avatar.png'), width=27).img-circle
-			//- Patty
-			a#site-nav-toggle(href='javascript:;').site-nav-toggle
-				.patty
-				
-		#site-nav
-			nav(role='navigation')
-				ul.navbar-nav.navbar-nav--left
-					each link in navLinks
-						li(class=(section == link.key ? 'nav-item-' + link.key + ' active' : 'nav-item-' + link.key)): a(href=link.href)= link.label
-					li: a(href='mailto:craig.sharkie+sydjs@gmail.com') Contact
-				ul.navbar-nav.navbar-nav--right
-					if user
-						li: a(href='/me').user.hidden-xs
-								img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/avatar.png'), width=27).img-circle
-								=user.name.first
-						li: a(href='/signout')
-							span.visible-xs Sign out
-							span.entypo.entypo-large.entypo-logout.hidden-xs
-					else
-						li: a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign in
-						li: a(href='/join', data-from=page.path).js-auth-trigger Join
-//-.header-placeholder
+		#header: .container
+
+			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
+			//- ... or completely change this header to suit your design.
+			nav( class="navbar navbar-inverse navbar-fixed-top", role="navigation")
+				.container
+
+					.navbar-header
+						button( type="button", class="navbar-toggle", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+							span(class="sr-onlyToggle navigation")
+							span(class="icon-bar")
+							span(class="icon-bar")
+							span(class="icon-bar")
+
+						a(class="navbar-brand", href="/") Jangkoo - Just free time things
+
+
+					.collapse.navbar-collapse(id="bs-example-navbar-collapse-1")
+						ul(class="nav navbar-nav navbar-right")
+							each link in navLinks
+								li(class=(section == link.key ? 'active' : null)): a(href=link.href): i(class=link.icon)= ' '+ link.label
+
+							li(class="dropdown")
+								a(href="#", class="dropdown-toggle", data-toggle="dropdown"): i(class="fa fa-briefcase")  Portfolio 
+
+								ul(class="dropdown-menu")
+									li
+										a(href="https://waach.com/")  Waach
+
+									li
+										a(href="http://stage.goalsmapper.com") GoalsMapper
+
+									li
+										a(href="/projects/hpsite/cec/") HP microsite
+
+									li
+										a(href="/projects/menuboxes/") Menu boxes
+									li
+										a(href="/projects/wordshooting/") Word shooting web game
+
+
+							li(class="dropdown")
+								a(href="#" ,class="dropdown-toggle", data-toggle="dropdown"): i(class="fa fa-gamepad")  Dota2 things
+
+								ul(class="dropdown-menu")
+									li
+										a(id="leader-board" href="/dota/leaderboards") Leaderboards
+
+									li
+										a(href="/dota/bets") Bets
+							if user
+								if user.canAccessKeystone
+									li: a(href='/keystone') Open Admin
+								li: a(href='/me').user.hidden-xs
+										img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/default-avatar.jpg'), width=27).img-circle
+										=user.name.first
+								li: a(href='/keystone/signout') Sign Out
+							else
+								li: a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign in
