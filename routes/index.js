@@ -100,5 +100,6 @@ exports = module.exports = function (app) {
 	
 	// scrape API
 	app.get('/api/scrape', keystone.middleware.api, routes.api.scrape);
+	app.get('/api/news_scrape', keystone.middleware.api, routes.api.news_scrape);
 
 };
