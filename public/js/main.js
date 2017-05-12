@@ -62,5 +62,21 @@ jQuery(document).ready(function($){
         $(this).stop().animate({top:'0px'},{queue:false,duration:300});
 		$(".description",this).stop().animate({height:'0px',paddingTop:"0px",opacity:0},{queue:false,duration:500});
     }); 
+    $('.carousel[data-type="multi"] .item').each(function(){
+	  var next = $(this).next();
+	  if (!next.length) {
+	    next = $(this).siblings(':first');
+	  }
+	  next.children(':first-child').clone().appendTo($(this));
+	  
+	  for (var i=0;i<4;i++) {
+	    next=next.next();
+	    if (!next.length) {
+	        next = $(this).siblings(':first');
+	  	}
+	    
+	    next.children(':first-child').clone().appendTo($(this));
+	  }
+	});
 
 });
