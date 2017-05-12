@@ -92,7 +92,7 @@ block content
 						.col-lg-12
 								h2( class="page-header") Portfolios
 
-				.carousel.slide( data-ride="carousel", data-type="multi", data-interval="3000")
+				.carousel.slide#porfolio-slide( data-ride="carousel", data-type="multi", data-interval="3000")
 					.carousel-inner
 						.item.active
 							.col-md-2.col-sm-6.col-xs-12
@@ -120,6 +120,11 @@ block content
 							.col-md-2.col-sm-6.col-xs-12
 								a(href="http://renobox.com.sg/")
 										img( class="img-responsive img-portfolio img-hover", src="/images/logo.png" alt="")
+					a(class="left carousel-control" href="#porfolio-slide" data-slide="prev")
+							span(class="icon-prev")
+
+					a(class="right carousel-control" href="#porfolio-slide" data-slide="next")
+							span(class="icon-next")
 
 
 				.row
