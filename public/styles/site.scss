@@ -122,5 +122,10 @@ font-family : $pacifico;
 	.carousel-inner .prev		 { left: -16.7%; }	
 }
 
-
+.row-fluid{
+    white-space: nowrap;
+}
+.row-fluid .col-sm-4{
+    display: inline-block;
+}
 
