@@ -84,7 +84,7 @@ $(window).scroll(function() {
    }
    else {
     $(".navbar-inverse").css({"background-color": "rgba(0,0,0,1)", "color":"white"});
-    $(".navbar-inverse .navbar-nav > li > a").css({"color":"white"});
+    $(".navbar-inverse .navbar-nav > li > a").css({"color":"wheat"});
   }
 });
 mixpanel.track("About");
