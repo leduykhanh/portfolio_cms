@@ -53,7 +53,7 @@ block content
 						a(href="http://www.goldenequator.com/")
 							img(src="/images/company.png")
 				.col-sm-6
-					- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS"],["Django","Wordpress","Orchard CMS"],["Postgres","MySQL","MongoDB","MSSQL"],["Gulp","Bower","Composer"],["ReactNative"]]
+					- var skills = [["Html", "Javascript", "Css", "Python", "PHP", "Java", "C#", "C++"],["JQuery", "Bootstrap", "NodeJS", "ReactJS","EmberJS","KeystoneJS","Loopback"],["Django","Wordpress","Orchard CMS"],["Postgres","MySQL","MongoDB","MSSQL"],["Gulp","Bower","Composer"],["React Native","Native Android"],["Android Studio","PyCharm", "Sublime Text", "Atom", "Visual Studio"]]
 					.skill-title Technical skills
 					ul
 						each skill_set in skills
@@ -122,6 +122,8 @@ block content
 						.portfolio-header(style="background-color: rgba(255, 255, 33, 0.8); ") 
 							.name Tutti - online shopping
 						.description
+							.url 
+								a(href="tutti.ir") tutti.ir
 							each tech in tech_stacks
 								span.badge #{tech}
 
