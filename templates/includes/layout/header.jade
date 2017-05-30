@@ -32,10 +32,10 @@
 								a(href="/dota/bets") Bets
 					if user
 						if user.canAccessKeystone
-							li: a(href='/keystone') Open Admin
+							li: a(href='/keystone'): i(class="fa fa-cogs")
 						li: a(href='/me').user.hidden-xs
 								img(src=(user.photo.exists ? user._.photo.thumbnail(27,27) : user.avatarUrl || '/images/default-avatar.jpg'), width=27).img-circle
 								=user.name.first
-						li: a(href='/keystone/signout') Sign Out
+						li: a(href='/keystone/signout'): i(class="fa fa-power")
 					else
 						li: a(href='/signin', data-from=page.path, data-initial='signin').js-auth-trigger Sign in
