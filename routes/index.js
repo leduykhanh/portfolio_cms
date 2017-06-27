@@ -80,6 +80,7 @@ exports = module.exports = function (app) {
 	// API
 	app.get('/api/post/list', keystone.middleware.api, routes.api.posts.list);
 	app.all('/api/post/create', keystone.middleware.api, routes.api.posts.create);
+	app.all('/api/callback', keystone.middleware.api, routes.api.callback);
 	app.get('/api/post/:id', keystone.middleware.api, routes.api.posts.get);
 	app.all('/api/post/:id/update', keystone.middleware.api, routes.api.posts.update);
 	app.get('/api/post/:id/remove', keystone.middleware.api, routes.api.posts.remove);
