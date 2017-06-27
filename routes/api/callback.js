@@ -1,4 +1,4 @@
 exports = module.exports = function(req, res){
-	console.log(req);
-  	res.send("ok");
+	var data = JSON.parse(req.body);
+  	res.send(data);
 }
