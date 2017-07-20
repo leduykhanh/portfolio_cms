@@ -13,17 +13,16 @@ var Bet = new keystone.List('Bet', {
 });
 
 Bet.add({
-	name : {type: String, required: true},
 	firstTeam: { name: {type:String}, logo: { type: String } },
 	secondTeam: { name: {type:String}, logo: { type: String } },
-	state: { type: Types.Select, options: 'draft, live, defunct ', default: 'draft', index: true },
+	state: { type: Types.Select, options: 'draft, live, defunct ', default: 'draft'},
 	firstScore: { type: Number, default: 0 },
 	secondScore: { type: Number, default: 0 },
 	firstTeamBets: { type: Number, default: 0 },
 	secondTeamBets: { type: Number, default: 0 },
 	drawBets: { type: Number, default: 0 },
 	result : { type: Number, default: 0 }, // 1 2 0
-	expireDate: { type: Types.Datetime, index: true},
+	expireDate: { type: Types.Datetime},
 	image: { type: Types.CloudinaryImage },
 	categories: { type: Types.Relationship, ref: 'BetCategory', many: true },
 });
