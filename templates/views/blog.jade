@@ -21,6 +21,7 @@ mixin post(post)
 		p!= post.content.brief
 		if post.content.extended
 			p.read-more.text-right: a(href='/blog/post/' + post.slug) Read more...
+	include ../includes/layout/inpageadsense
 
 block intro
 	.container
@@ -34,7 +35,6 @@ block content
 			else
 				if data.posts.results.length
 					if data.posts.totalPages > 1
-						include ../includes/layout/inpageadsense
 						h4.text-weight-normal Showing 
 							strong #{data.posts.first}
 							|  to 
