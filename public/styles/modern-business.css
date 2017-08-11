@@ -35,6 +35,7 @@ header.carousel .item,
 header.carousel .item.active,
 header.carousel .carousel-inner {
     height: 100%;
+    z-index: 4;
 }
 
 header.carousel .fill {
