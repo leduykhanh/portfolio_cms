@@ -53,3 +53,12 @@ block content
 										textarea(placeholder='Add your comment...', name='content').form-control
 										.mv-1
 											button(type='submit').btn.btn-success Submit
+						script.
+							(function() {
+							var d = document, s = d.createElement('script');
+
+							s.src = 'https://jangkoo.disqus.com/embed.js';
+
+							s.setAttribute('data-timestamp', +new Date());
+							(d.head || d.body).appendChild(s);
+							})();
