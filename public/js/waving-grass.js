@@ -9,8 +9,6 @@ function wavingGrass() {
 	var numOfGrass = 200,
         grassWidth = 12,
 		grass,
-		
-        meter = new animMeter('meter'),
 
 		ctx = canvas.getContext('2d'),
 		w = canvas.width,
@@ -218,7 +216,6 @@ function wavingGrass() {
 		renderGrass(ctx, grass);
 	
 		/// loop
-        meter.update(timeArg);
 		requestAnimationFrame(animate);
 	}
 	animate();
