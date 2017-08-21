@@ -124,7 +124,7 @@ function wavingGrass() {
 
 		return grass;
 	}
-	grass = makeGrass(100, w, h * 0.4, 0.3, grassWidth);
+	grass = makeGrass(150, w, h * 0.4, 0.3, grassWidth);
 
     // slider.onchange = gheight.onchange = function(){
     //     updateGrass();
