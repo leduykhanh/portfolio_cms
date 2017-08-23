@@ -5,167 +5,168 @@ block css
 	link(href="/styles/sky.css", rel="stylesheet")
 
 block slider
-		header(id="myCarousel", class="carousel slide")
+	header(id="myCarousel", class="carousel slide")
 
-				ol(class="carousel-indicators")
-						li(data-target="#myCarousel", data-slide-to="0" class="active")
-						li( data-target="#myCarousel", data-slide-to="1")
-						li( data-target="#myCarousel", data-slide-to="2")
-
-
-				.carousel-inner
-
-					.item.active
-						.carousel-caption
-							h2 Buid websites with most recent technologies
+		ol(class="carousel-indicators")
+			li(data-target="#myCarousel", data-slide-to="0" class="active")
+			li( data-target="#myCarousel", data-slide-to="1")
+			li( data-target="#myCarousel", data-slide-to="2")
 
 
-					.item
-						.carousel-caption
-							h2 Build Android Mobile Application
+		.carousel-inner
+
+			.item.active
+				.carousel-caption
+					h2 Buid websites with most recent technologies
 
 
-					.item
-						.carousel-caption
-							h2 Create Games
-					.stars
-					.twinkling
-					.clouds
+			.item
+				.carousel-caption
+					h2 Build Android Mobile Application
+
+
+			.item
+				.carousel-caption
+					h2 Create Games
+			.stars
+			.twinkling
+			.clouds
 
 
 
-				a(class="left carousel-control" href="#myCarousel" data-slide="prev")
-						span(class="icon-prev")
+		a(class="left carousel-control" href="#myCarousel" data-slide="prev")
+				span(class="icon-prev")
 
-				a(class="right carousel-control" href="#myCarousel" data-slide="next")
-						span(class="icon-next")
+		a(class="right carousel-control" href="#myCarousel" data-slide="next")
+				span(class="icon-next")
 
 
 block content
-		.container
+	.container
 
-				.row
+		.row
+			.col-lg-12
+					h1(class="page-header")	Jangkoo's Services
+
+			.col-md-4
+				.panel.panel-default
+					.panel-heading
+						h4
+							i( class="fa fa-fw fa-check")
+							span Website
+
+					.panel-body
+							p Provides web design, CMS, hosting... in different languages and platforms such as PHP, Python, ReactJS...
+							a( href="#", class="btn btn-default") Learn More
+
+
+
+				.col-md-4
+						.panel.panel-default
+							.panel-heading
+								h4
+									i(class="fa fa-fw fa-gift")
+									span Mobile Application
+
+							.panel-body
+								p Focuses on Android application, online and offline apps
+								a(href="#", class="btn btn-default") Learn More
+
+
+
+				.col-md-4
+						.panel.panel-default
+								.panel-heading
+										h4
+											i( class="fa fa-fw fa-compass")
+											span Game Development
+
+								.panel-body
+										p Builds 2D games with some popular frameworks or native apps
+										a(href="#", class="btn btn-default") Learn More
+
+
+
+
+
+			.row
 					.col-lg-12
-							h1(class="page-header")	Jangkoo's Services
+							h2( class="page-header") Portfolios
 
-					.col-md-4
-							.panel.panel-default
-									.panel-heading
-											h4
-												i( class="fa fa-fw fa-check")
-												span Website
+			.carousel.slide#porfolio-slide( data-ride="carousel", data-type="multi", data-interval="3000")
+				.carousel-inner
+					.item.active
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="https://waach.com/")
+									img(class="img-responsive img-portfolio img-hover", src="https://waach.com/static/images/common/logo_new_dark.png" alt="")
 
-									.panel-body
-											p Provides web design, CMS, hosting... in different languages and platforms such as PHP, Python, ReactJS...
-											a( href="#", class="btn btn-default") Learn More
+					.item
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="http://tutti.ir/")
+									img(class="img-responsive img-portfolio img-hover", src="http://tutti.ir/themes/default-bootstrap/_new/img/landing/tutti_logo_final.png" alt="")
+					.item
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="http://app.goalsmapper.com/")
+									img(class="img-responsive img-portfolio img-hover", src="http://stage.goalsmapper.com/static/images/common/logo.png" alt="")
+					.item
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="http://ppp.com.sg/")
+									img( class="img-responsive img-portfolio img-hover", src="http://ppp.com.sg/wp-content/uploads/2016/01/ppp_logo-4.png" alt="")
 
+					.item
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="https://play.google.com/store/apps/details?id=jangkoo.shadowfiend.android")
+									img( class="img-responsive img-portfolio img-hover", src="https://lh3.googleusercontent.com/J0MTdRn05p4hWlG-MLeddkFLfsUqVqTdNl2q4SlYTLsYBh2-FMZ8j7vBjUdD1TdsCYhp=w300-rw" alt="")
+					.item
+						.col-md-2.col-sm-6.col-xs-12
+							a(href="http://renobox.com.sg/")
+									img( class="img-responsive img-portfolio img-hover", src="/images/logo.png" alt="")
+				a(class="left carousel-control" href="#porfolio-slide" data-slide="prev")
+						span(class="icon-prev")
 
-
-					.col-md-4
-							.panel.panel-default
-									.panel-heading
-											h4
-												i(class="fa fa-fw fa-gift")
-												span Mobile Application
-
-									.panel-body
-											p Focuses on Android application, online and offline apps
-											a(href="#", class="btn btn-default") Learn More
-
-
-
-					.col-md-4
-							.panel.panel-default
-									.panel-heading
-											h4
-												i( class="fa fa-fw fa-compass")
-												span Game Development
-
-									.panel-body
-											p Builds 2D games with some popular frameworks or native apps
-											a(href="#", class="btn btn-default") Learn More
+				a(class="right carousel-control" href="#porfolio-slide" data-slide="next")
+						span(class="icon-next")
 
 
+			.row
+					.col-lg-12
+							h2(class="page-header") Techstacks can be used
+
+					.col-md-6
+							p We can build projects in
+							ul
+									li <strong>PHP</strong>: Wordpress, Prestashop
+
+									li <strong>Python</strong>: Django, Odoo
+									li <strong>Javascript</strong>: ReactJS, NodeJS
+									li <strong>Java Games</strong>: LibGDX
+									li <strong>C#</strong>:
+									li <strong>C++</strong>:
+
+							p We are flexible with any new technologies, as long as it provides a good suit to customers' requirements.
+
+					.col-md-6
+							img( class="img-responsive", src="https://s-media-cache-ak0.pinimg.com/originals/57/3d/db/573ddba78cc22e7a483caa3861f646b6.jpg" alt="")
 
 
+			/// .row
 
-				.row
-						.col-lg-12
-								h2( class="page-header") Portfolios
-
-				.carousel.slide#porfolio-slide( data-ride="carousel", data-type="multi", data-interval="3000")
-					.carousel-inner
-						.item.active
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="https://waach.com/")
-										img(class="img-responsive img-portfolio img-hover", src="https://waach.com/static/images/common/logo_new_dark.png" alt="")
-
-						.item
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="http://tutti.ir/")
-										img(class="img-responsive img-portfolio img-hover", src="http://tutti.ir/themes/default-bootstrap/_new/img/landing/tutti_logo_final.png" alt="")
-						.item
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="http://app.goalsmapper.com/")
-										img(class="img-responsive img-portfolio img-hover", src="http://stage.goalsmapper.com/static/images/common/logo.png" alt="")
-						.item
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="http://ppp.com.sg/")
-										img( class="img-responsive img-portfolio img-hover", src="http://ppp.com.sg/wp-content/uploads/2016/01/ppp_logo-4.png" alt="")
-
-						.item
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="https://play.google.com/store/apps/details?id=jangkoo.shadowfiend.android")
-										img( class="img-responsive img-portfolio img-hover", src="https://lh3.googleusercontent.com/J0MTdRn05p4hWlG-MLeddkFLfsUqVqTdNl2q4SlYTLsYBh2-FMZ8j7vBjUdD1TdsCYhp=w300-rw" alt="")
-						.item
-							.col-md-2.col-sm-6.col-xs-12
-								a(href="http://renobox.com.sg/")
-										img( class="img-responsive img-portfolio img-hover", src="/images/logo.png" alt="")
-					a(class="left carousel-control" href="#porfolio-slide" data-slide="prev")
-							span(class="icon-prev")
-
-					a(class="right carousel-control" href="#porfolio-slide" data-slide="next")
-							span(class="icon-next")
+			hr
 
 
-				.row
-						.col-lg-12
-								h2(class="page-header") Techstacks can be used
+			.well
+					.row
+							.col-md-8
+									p.quote The best way to improve your skills is keeping doing things, don't just stick with one thing....
 
-						.col-md-6
-								p We can build projects in
-								ul
-										li <strong>PHP</strong>: Wordpress, Prestashop
+							.col-md-4
+									a(class="btn btn-lg, btn-default, btn-block", href="#Call to Action")
+			.row#order-counts
+				.order There are <span id="order-count"> 0 </span> orders done
+				.order <span id="customer-count">0</span> happy customers.
 
-										li <strong>Python</strong>: Django, Odoo
-										li <strong>Javascript</strong>: ReactJS, NodeJS
-										li <strong>Java Games</strong>: LibGDX
-										li <strong>C#</strong>:
-										li <strong>C++</strong>:
-
-								p We are flexible with any new technologies, as long as it provides a good suit to customers' requirements.
-
-						.col-md-6
-								img( class="img-responsive", src="https://s-media-cache-ak0.pinimg.com/originals/57/3d/db/573ddba78cc22e7a483caa3861f646b6.jpg" alt="")
-
-
-				/// .row
-
-				hr
-
-
-				.well
-						.row
-								.col-md-8
-										p.quote The best way to improve your skills is keeping doing things, don't just stick with one thing....
-
-								.col-md-4
-										a(class="btn btn-lg, btn-default, btn-block", href="#Call to Action")
-				.row#order-counts
-					.order There are <span id="order-count"> 0 </span> orders done
-					.order <span id="customer-count">0</span> happy customers.
-
-				hr
+			hr
+	.fb-send-to-messenger(messenger_app_id="1678638095724206" page_id="1429124570720566" data-ref="" color="blue" size="xlarge")		
 
 block js
 	script(src='/js/chat.js')
