@@ -23,7 +23,7 @@ exports.initLocals = function (req, res, next) {
 		{ label: 'Blog', key: 'blog', href: '/blog',icon:'fa fa-book' },
 		{ label: 'Gallery', key: 'gallery', href: '/gallery',icon:'fa fa-folder-open' },
 		{ label: 'Contact', key: 'contact', href: '/contact',icon:'fa fa-comment' },
-		{ label: 'About', key: 'about', href: '/about',icon:'fa fa-user' },
+		{ label: 'Resume', key: 'resume', href: '/resume',icon:'fa fa-user' },
 	];
 	res.locals.user = req.user;
 	res.locals.page = {
