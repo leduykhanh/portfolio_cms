@@ -51,7 +51,7 @@ exports = module.exports = function (app) {
 	app.all('/blog/post/:post', routes.views.post);
 	//app.get('/gallery', routes.views.gallery);
 	app.get('/resume', routes.views.resume);
-	app.all('/contact', routes.views.contact);
+	//app.all('/contact', routes.views.contact);
 		// Session
 	app.all('/join', routes.views.session.join);
 	app.all('/signin', routes.views.session.signin);
