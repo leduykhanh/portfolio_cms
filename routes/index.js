@@ -49,7 +49,7 @@ exports = module.exports = function (app) {
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);
 	app.all('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
+	//app.get('/gallery', routes.views.gallery);
 	app.get('/resume', routes.views.resume);
 	app.all('/contact', routes.views.contact);
 		// Session
